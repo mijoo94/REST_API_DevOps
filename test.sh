@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Define the API URL
-API_URL="http:localhost:5000"
+API_URL="http://localhost:5000"
 
 # Add an employee
 echo "Adding an employee..."
