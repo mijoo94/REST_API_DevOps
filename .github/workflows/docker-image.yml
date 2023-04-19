@@ -20,6 +20,7 @@ jobs:
         docker run -p 5000:5000 -d employee-rest-api
     - name: run test
       run: |
-        python3 test.py
+        chmod +x test.sh
+        ./test.sh
         
       
