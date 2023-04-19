@@ -21,9 +21,9 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         
     #delete the added employee  
-       # deleteURL = baseURL + "/" + str(employee_id)
-       # response = requests.delete(deleteURL)
-       # self.assertEqual(response.status_code, 200)
+        deleteURL = baseURL + "/" + str(employee_id)
+        response = requests.delete(deleteURL)
+        self.assertEqual(response.status_code, 200)
 
 if __name__ == '__main__':
     unittest.main()
