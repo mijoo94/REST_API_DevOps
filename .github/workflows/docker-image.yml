@@ -17,5 +17,9 @@ jobs:
         
     - name: docker run
       run: |
-        docker run -p 5000:5000 employee-rest-api
+        docker run -p 5000:5000 -d employee-rest-api
+    - name: run test
+      run: |
+        ./test.sh
+        
       
