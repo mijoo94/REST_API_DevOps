@@ -1,8 +1,5 @@
 FROM python:3.9-slim-buster
 
-RUN apt-get install libsqlite3-dev && \
-    rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 COPY . /app
 
