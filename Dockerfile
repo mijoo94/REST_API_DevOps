@@ -1,19 +1,16 @@
-FROM ubuntu 
-
-RUN apt-get update -y
-RUN apt-get install python3-pip -y
-
 FROM python:3.9-slim-buster
-RUN pip install Flask
 
-ADD app.py /
-WORKDIR /
+RUN apt-get install -y sqlite3 && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY . /app
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-COPY . .
-
 # Check if the database file exists before running the program
-RUN test -f /employee_management.db
+RUN test -f /app/employee_management.db
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
