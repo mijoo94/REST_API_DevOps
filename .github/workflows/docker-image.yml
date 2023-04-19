@@ -14,10 +14,15 @@ jobs:
     - name: docker build
       run: | 
         docker build -t employee-rest-api .
-        
+    - name: check docker processes
+      run: |
+        docker ps
     - name: docker run
       run: |
         docker run -p 5000:5000 -d employee-rest-api
+    - name: check docker processes
+      run: |
+        docker ps
     - name: run test
       run: |
         chmod +x test.sh
