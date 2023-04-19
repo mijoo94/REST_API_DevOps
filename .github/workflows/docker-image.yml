@@ -23,5 +23,6 @@ jobs:
     - name: run unit test
       run: |
         python3 test.py
+        CRUD_ops_test.py
         
       
