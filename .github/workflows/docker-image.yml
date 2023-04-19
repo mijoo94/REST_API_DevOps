@@ -27,5 +27,6 @@ jobs:
       run: |
         chmod +x test.sh
         ./test.sh
+        python3 test.py
         
       
